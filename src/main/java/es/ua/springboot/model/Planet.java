@@ -25,6 +25,7 @@ public class Planet {
     private String orbitalPeriod;
     private String gravity;
     private String population;
+    private String diameter;
     private String climate;
     private String terrain;
     private String surfaceWater;

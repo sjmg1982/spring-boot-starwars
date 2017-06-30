@@ -1,8 +1,9 @@
 package es.ua.springboot;
 
+import es.ua.springboot.model.People;
 import es.ua.springboot.model.Planet;
+import es.ua.springboot.repository.PeopleRepository;
 import es.ua.springboot.repository.PlanetRepository;
-import lombok.AllArgsConstructor;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,13 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PlanetRepositoryTest {
+public class PeopleRepositoryTest {
     @Autowired
-    private PlanetRepository planetRepository;
+    private PeopleRepository peopleRepository;
 
     @Test
     public void should_find_by_name() throws Exception {
-        Planet alderaan =planetRepository.findByName("Alderaan");
-        assertThat(alderaan.getName(),is("Alderaan"));
+        People persona =peopleRepository.findByNameIgnoreCase("red");
+        assertThat(persona.getName(),is("Alderaan"));
     }
 }

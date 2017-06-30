@@ -22,19 +22,20 @@ public class Film {
     private Long filmId;
 
     private String title;
-    private Integer emisodeId;
+    private Integer episodeId;
+    @Column(length = 500)
     private String openingCrawl;
     private String director;
     private String producer;
     private Date releaseDate;
 
     @ManyToMany
-    @JoinTable(joinColumns = {@JoinColumn(name="filmId")},
-            inverseJoinColumns = {@JoinColumn(name="filmId")})
+    @JoinTable(joinColumns = {@JoinColumn(name="film_id")},
+            inverseJoinColumns = {@JoinColumn(name="people_id")})
     private List<People> people;
 
     @ManyToMany
-    @JoinTable(joinColumns = {@JoinColumn(name="filmId")},
-            inverseJoinColumns = {@JoinColumn(name="filmId")})
+    @JoinTable(joinColumns = {@JoinColumn(name="film_id")},
+            inverseJoinColumns = {@JoinColumn(name="planet_id")})
     private List<Planet> planets;
 }

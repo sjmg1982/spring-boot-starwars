@@ -21,10 +21,12 @@ public class People {
     @GeneratedValue
     private Long peopleId;
 
+    private String birthYear;
     private String name;
     private String eyeColor;
     private String gender;
     private String hairColor;
+    private String height;
     private String mass;
     private String skinColor;
 }
