@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface FilmRepository extends JpaRepository<Film,Long> {
     List<Film> findAllByOrderByEpisodeId();
-//    List<Film> findByReleaseDateGreaterThan(Date fecha);
+    List<Film> findByReleaseDateGreaterThan(Date fecha);
 
 
 //    @Query(value="select f from Film join f.people where p.name=:name")
