@@ -38,12 +38,12 @@ public class PlanetRepositoryTest {
         assertThat(all.getNumberOfElements(),is(2));
     }
 
-//    @Test
-//    public void show_sort_planets() throws Exception {
-//
-//        Sort sort=new Sort(Sort.Direction.ASC,"episodeId");
-//
-//        Page<Planet> all =planetRepository.findAllBy(sort);
-//        assertThat(all.getNumberOfElements(),is(2));
-//    }
+    @Test
+    public void show_sort_planets() throws Exception {
+
+        Sort sort=new Sort(Sort.Direction.ASC,"episodeId");
+
+        Page<Planet> all =planetRepository.findAllBy(sort);
+        assertThat(all.getNumberOfElements(),is(2));
+    }
 }

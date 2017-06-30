@@ -18,7 +18,6 @@ public interface PlanetRepository extends JpaRepository<Planet,Long> {
     Planet findByName(String name);
     Page<Planet> findAllBy(Pageable pageable);
     Page<Planet> findAllBy(Sortable pageable);
-    Page<Planet> findAllBy(Pageable pageable,Sortable pageable);
     Planet findByNameLike(String name);
     List<Planet> findByNameContaining(String name);
     List<Planet> findAllByOrderByNameDesc();

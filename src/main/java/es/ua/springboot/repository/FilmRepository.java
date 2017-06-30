@@ -13,7 +13,7 @@ import java.util.List;
  * Created by sjmg on 30/06/17.
  */
 @Repository
-public interface FilmRepository extends JpaRepository<Film,Long> {
+public interface FilmRepository extends JpaRepository<Film,Long>,CustomFilmRepository {
     List<Film> findAllByOrderByEpisodeId();
     List<Film> findByReleaseDateGreaterThan(Date fecha);
 

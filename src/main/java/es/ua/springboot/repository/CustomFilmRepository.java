@@ -11,7 +11,7 @@ import java.util.List;
  * Created by sjmg on 30/06/17.
  */
 @Repository
-public interface CustomFilmRepository extends JpaRepository<Film,Long> {
-    void logIn(Film f);
+public interface CustomFilmRepository {
+    void logFilm(Film f);
 
 }
