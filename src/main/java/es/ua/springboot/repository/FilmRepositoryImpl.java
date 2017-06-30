@@ -2,7 +2,6 @@ package es.ua.springboot.repository;
 
 import es.ua.springboot.model.Film;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  * Created by sjmg on 30/06/17.
