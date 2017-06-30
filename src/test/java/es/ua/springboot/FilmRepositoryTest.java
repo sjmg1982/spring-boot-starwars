@@ -1,9 +1,8 @@
 package es.ua.springboot;
 
+import es.ua.springboot.model.Film;
 import es.ua.springboot.model.People;
-import es.ua.springboot.model.Planet;
-import es.ua.springboot.repository.PeopleRepository;
-import es.ua.springboot.repository.PlanetRepository;
+import es.ua.springboot.repository.FilmRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +19,13 @@ import static org.junit.Assert.assertThat;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PeopleRepositoryTest {
+public class FilmRepositoryTest {
     @Autowired
-    private PeopleRepository peopleRepository;
+    private FilmRepository filmRepository;
 
     @Test
-    public void should_find_by_name() throws Exception {
-        List<People> persona =peopleRepository.findByNameStartingWith();
-        assertThat(persona.size(),is(0));
+    public void show_all_planets() throws Exception {
+        List<Film> all =filmRepository.findAllByOrderByEpisodeId();
+        all.stream().forEach(System.out::println);
     }
 }

@@ -3,6 +3,7 @@ package es.ua.springboot.model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,6 +17,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString(exclude={"people","planets"})
 public class Film {
     @Id
     @GeneratedValue

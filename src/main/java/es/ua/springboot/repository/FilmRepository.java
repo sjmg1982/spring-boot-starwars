@@ -1,7 +1,6 @@
 package es.ua.springboot.repository;
 
 import es.ua.springboot.model.Film;
-import es.ua.springboot.model.People;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -15,11 +14,11 @@ import java.util.List;
  */
 @Repository
 public interface FilmRepository extends JpaRepository<Film,Long> {
-    List<Film> findAllByOrOrderByEpisodeId();
-    List<Film> findByReleaseDateGreaterThan(Date fecha);
+    List<Film> findAllByOrderByEpisodeId();
+//    List<Film> findByReleaseDateGreaterThan(Date fecha);
 
 
-    @Query(value="select f from Film join f.people where p.name=:name")
-    List<Film> findAllByPeopleContais(@Param("name") String name);
+//    @Query(value="select f from Film join f.people where p.name=:name")
+//    List<Film> findAllByPeopleContais(@Param("name") String name);
 
 }
