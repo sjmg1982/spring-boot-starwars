@@ -16,10 +16,10 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Personaje {
+public class People {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long peopleId;
 
     private String name;
     private String eyeColor;

@@ -16,10 +16,10 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Peliculas {
+public class Film {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long filmId;
 
     private String title;
     private Integer emisodeId;
@@ -29,12 +29,12 @@ public class Peliculas {
     private Date releaseDate;
 
     @ManyToMany
-    @JoinTable(joinColumns = {@JoinColumn(name="id")},
-            inverseJoinColumns = {@JoinColumn(name="id")})
-    private List<Personaje> people;
+    @JoinTable(joinColumns = {@JoinColumn(name="filmId")},
+            inverseJoinColumns = {@JoinColumn(name="filmId")})
+    private List<People> people;
 
     @ManyToMany
-    @JoinTable(joinColumns = {@JoinColumn(name="id")},
-            inverseJoinColumns = {@JoinColumn(name="id")})
+    @JoinTable(joinColumns = {@JoinColumn(name="filmId")},
+            inverseJoinColumns = {@JoinColumn(name="filmId")})
     private List<Planet> planets;
 }

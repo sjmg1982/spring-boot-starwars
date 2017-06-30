@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Planet {
     @Id
     @GeneratedValue
-    private Long id;
+    private Long planetId;
 
     private String name;
     private String rotationPeriod;
